@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -16,6 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+      <Script
+        data-explicit-opt-in="true"
+        src="https://vercel-live-git-allow-localhost-usage.vercel.sh/_next-live/feedback/feedback.js"
+        strategy="afterInteractive"
+      />
     </html>
   )
 }
